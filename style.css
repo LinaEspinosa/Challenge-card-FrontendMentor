@@ -20,6 +20,9 @@
 body{
     height:100vh;
     width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--colorSecondary);
     font-family:var(--Fraunces)
 
@@ -27,8 +30,8 @@ body{
 
 .container{
     margin:1rem 1rem;
-    border-radius: 1rem;
-    overflow-y: auto;
+    border-radius: .7rem;
+    overflow: hidden;
 
 }
 .container .img .img-desktop{
@@ -132,23 +135,19 @@ body{
     background-color:var(--btn-hover);
 }
 
- @media (min-width: 400px) {
+@media only screen and (min-width: 400px) {
 
-    body{
+    /* body{
+        max-height: 100vh;
         display: flex;
         justify-content: center;
         align-items:center;
-    }
+    } */
 
-    .container{
-        width:40%;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
+
 
     .container .card{
-        display:flex;
+        display: flex;
         width:32rem;
         height:23.5rem;
         border-radius: 0.7rem;
