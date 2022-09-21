@@ -1,5 +1,6 @@
 :root{
     --colorPrimary:hsl(158, 36%, 37%);
+    --btn-hover:#1d3d32;
     --colorSecondary: hsl(30, 38%, 92%);
     --colorFondo:#f3eae3;   
     --colorDarkBlue: hsl(212, 21%, 14%);
@@ -29,6 +30,9 @@ body{
     border-radius: 1rem;
     overflow-y: auto;
 
+}
+.container .img .img-desktop{
+    display:none;
 }
 .container .img img{
     display:flex;
@@ -60,6 +64,7 @@ body{
     color:var(--colorDarkGrayish);
     letter-spacing: .3rem;
     font-weight: 500;
+    font-family: var(--Montserrat);
 }
 .container .content .title{
     font-size:2.3rem;
@@ -73,7 +78,7 @@ body{
     margin-top: 1rem;
     font-family: var(--Montserrat);
     color: var(--colorDarkGrayish);
-    font-size:1rem;
+    font-size:.9rem;
     font-weight: 500;
     line-height: 1.5rem;
 }
@@ -105,17 +110,115 @@ body{
 .container .content .btn{
     background-color:var(--colorPrimary);
     color:var(--colorWhite);
-    font-weight: 500;
+    font-family:var(--Montserrat);
+    font-weight: 700;
     padding:1rem 0;
     width:100%;
     border:none;
-    font-size: 1rem;
+    font-size: .9rem;
     border-radius: .5rem;
     display: flex;
     justify-content:center;
     align-items:center;
     margin-top: 1rem;
 }
-.container .content .btn ico-icon{
-    margin-right: 1rem;
+.container .content .btn .ion-icon{
+    margin-right: .5rem;
+    font-weight: 700;
+    font-size:1.4rem;
 }
+
+.container .content .btn:hover{
+    background-color:var(--btn-hover);
+}
+
+ @media (min-width: 400px) {
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+
+    .container{
+        width:40%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .card{
+        display:flex;
+        width:32rem;
+        height:23.5rem;
+        border-radius: 0.7rem;
+        overflow: hidden;
+        
+    }
+
+    .container .img img{
+        height: 100%;
+        /* aspect-ratio: 1; */
+    }
+    .container .img,
+    .container .content{
+        width: 50%; 
+        
+    }
+    .container .img .img-desktop{
+        display:block;
+    }
+
+    .container .img .img-mobile {
+        display: none;
+    }
+
+    .container .content .type-product{
+        letter-spacing: .3rem;
+        font-size:.6rem;
+        /* font-family: ; */
+    }
+
+    .container .content .title{
+        font-size:1.8rem;
+        font-weight:700;
+        line-height: 1.7rem;
+        
+    }
+
+    .container .content .description{
+        font-size:.7rem;
+        line-height: 1.2rem;
+        font-weight:500;
+        
+    }
+
+    .container .content{
+        padding:1.9rem;
+        color:var(--colorDarkBlue);
+    
+    }
+    .container .content .price-discount{
+        font-size: 1.7rem;
+        
+    }
+
+    .container .content .price{
+        font-size:.7rem;
+        font-weight:500;
+        
+        
+    }
+    .container .content .btn{
+    
+    padding:.8rem 0;
+    font-size: .7rem;
+    font-weight: 700;
+    
+    }
+    
+}
+.container .content .btn .ion-icon{
+    font-size:1.2rem;
+    
+  } 
